@@ -14,7 +14,7 @@ public class Run {
             a.start();
             b.start();
             b.join(2000);
-            System.out.println("main end                      " + System.currentTimeMillis());
+            System.out.println("main end" + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         }

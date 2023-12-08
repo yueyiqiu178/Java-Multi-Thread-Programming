@@ -40,10 +40,10 @@ public class MyRun {
 
     public static void main(String[] args) throws Exception {
         MyRun run = new MyRun();
-        Thread a = new Thread(run.runnableB);
+        Thread a = new Thread(run.runnableA);
         a.start();
         Thread.sleep(100);
-        Thread b = new Thread(run.runnableA);
+        Thread b = new Thread(run.runnableB);
         b.start();
     }
 }

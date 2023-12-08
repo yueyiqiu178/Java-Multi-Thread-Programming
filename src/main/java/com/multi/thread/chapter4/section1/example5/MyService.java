@@ -18,9 +18,8 @@ public class MyService {
     public void await() {
         try {
             lock.lock();
-            System.out.println("await时间为 " + System.currentTimeMillis());
+            System.out.println("await时间为" + System.currentTimeMillis());
             condition.await();
-            System.out.println("ewait时间为 " + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -33,8 +32,6 @@ public class MyService {
             lock.lock();
             System.out.println("signal时间为" + System.currentTimeMillis());
             condition.signal();
-            Thread.sleep(2000);
-            System.out.println("mignal时间为" + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

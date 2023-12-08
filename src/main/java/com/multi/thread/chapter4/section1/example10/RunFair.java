@@ -8,8 +8,8 @@ package com.multi.thread.chapter4.section1.example10;
 public class RunFair {
 
     public static void main(String[] args) throws Exception {
-        final Service service = new Service(true);
-        //final Service service = new Service(false);
+        //final Service service = new Service(true);
+        final Service service = new Service(false);
         Runnable runnable = new Runnable() {
             public void run() {
                 System.out.println("A线程" + Thread.currentThread().getName() + "运行了");

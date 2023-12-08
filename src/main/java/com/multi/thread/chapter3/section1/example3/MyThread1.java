@@ -17,9 +17,9 @@ public class MyThread1 extends Thread {
     public void run() {
         try {
             synchronized (lock) {
-                System.out.println("开始 wait time =   " + System.currentTimeMillis());
+                System.out.println("开始 wait time = " + System.currentTimeMillis());
                 lock.wait();
-                System.out.println("结束 wait time =   " + System.currentTimeMillis());
+                System.out.println("结束 wait time = " + System.currentTimeMillis());
             }
         } catch (Exception e) {
             e.printStackTrace();

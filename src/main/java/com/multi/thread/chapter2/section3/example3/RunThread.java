@@ -21,13 +21,6 @@ public class RunThread extends Thread {
     public void run() {
         System.out.println("进入run了");
         while (isRunning == true) {
-//            System.out.println("run printStringMethod threadName = " + Thread.currentThread().getName());
-//            try {
-//				Thread.sleep(1000);
-//			} catch (InterruptedException e) {
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
         }
         System.out.println("线程被停止了");
     }

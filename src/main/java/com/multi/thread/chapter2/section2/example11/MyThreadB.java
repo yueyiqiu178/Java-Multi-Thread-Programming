@@ -19,6 +19,6 @@ public class MyThreadB extends Thread {
     @Override
     public void run() {
         super.run();
-        new Service().testMethod1(object);
+        service.testMethod1(object);
     }
 }

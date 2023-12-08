@@ -18,15 +18,12 @@ public class MyService {
 
     public void set() {
         try {
-        	System.out.println("P Head: "+Thread.currentThread().getName());
             lock.lock();
             while (hasValue == true) {
-                //System.out.println("有可能AA连续");
-            	System.out.println("P wait: "+Thread.currentThread().getName());
+                System.out.println("有可能AA连续");
                 condition.await();
             }
-            System.out.println("Producer: "+Thread.currentThread().getName());
-            //System.out.println("打印A");
+            System.out.println("打印A");
             hasValue = true;
             condition.signalAll();
         } catch (Exception e) {
@@ -37,15 +34,12 @@ public class MyService {
     }
     public void get() {
         try {
-        	System.out.println("C Head: "+Thread.currentThread().getName());
             lock.lock();
             while (hasValue == false) {
-                //System.out.println("有可能BB连续");
-            	System.out.println("C wait: "+Thread.currentThread().getName());
+                System.out.println("有可能BB连续");
                 condition.await();
             }
-            System.out.println("Consumer: "+Thread.currentThread().getName());
-            //System.out.println("打印B");
+            System.out.println("打印B");
             hasValue = false;
             condition.signalAll();
         } catch (Exception e) {

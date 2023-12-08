@@ -21,11 +21,11 @@ public class Run {
             threadPS[i].start();
             threadCS[i].start();
         }
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         Thread[] threads = new Thread[Thread.currentThread().getThreadGroup().activeCount()];
         Thread.currentThread().getThreadGroup().enumerate(threads);
         for (int i = 0; i < threads.length; i++) {
-            System.out.println("kkman:"+threads[i].getName() + " " + threads[i].getState());
+            System.out.println(threads[i].getName() + " " + threads[i].getState());
         }
     }
 }

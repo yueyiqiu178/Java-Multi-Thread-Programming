@@ -11,7 +11,6 @@ public class Run {
         PrintString printString = new PrintString();
         new Thread(printString).start();
         System.out.println("我要停止它！stopThread = " + Thread.currentThread().getName());
-        Thread.sleep(3000);
         printString.setContinuePrint(false);
     }
 }

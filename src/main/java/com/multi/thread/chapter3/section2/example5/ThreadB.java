@@ -12,7 +12,7 @@ public class ThreadB extends Thread {
         try {
             System.out.println("begin B threadName = " + Thread.currentThread().getName() + " " + System.currentTimeMillis());
             Thread.sleep(5000);
-            System.out.println("end B threadName =   " + Thread.currentThread().getName() + " " + System.currentTimeMillis());
+            System.out.println("end B threadName = " + Thread.currentThread().getName() + " " + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         }

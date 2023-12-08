@@ -10,7 +10,7 @@ public class OuterClass {
     static class Inner {
 
         public void method1() {
-            synchronized (new Integer(1)) {
+            synchronized ("其他的锁") {
                 for(int i = 0; i <= 10; i++) {
                     System.out.println(Thread.currentThread().getName() + " i = " + i);
                     try {

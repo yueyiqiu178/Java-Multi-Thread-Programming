@@ -17,7 +17,7 @@ public class Run {
         ThreadSubtract subtract2Thread = new ThreadSubtract(subtract);
         subtract2Thread.setName("subtract2Thread");
         subtract2Thread.start();
-        Thread.sleep(3000);
+        Thread.sleep(10000);
         ThreadAdd addThread = new ThreadAdd(add);
         addThread.setName("addThread");
         addThread.start();

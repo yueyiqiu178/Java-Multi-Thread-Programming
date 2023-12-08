@@ -23,6 +23,5 @@ public class Run {
         }
         Thread.sleep(2000);
         service.notifyMethod();
-        service.notifyMethod();
     }
 }

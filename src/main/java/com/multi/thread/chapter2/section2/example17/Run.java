@@ -11,10 +11,10 @@ public class Run {
         Service service = new Service();
         Service service1 = new Service();
         ThreadA a = new ThreadA(service);
-        a.setName("X");
+        a.setName("A");
         a.start();
         ThreadB b = new ThreadB(service1);
-        b.setName("Y");
+        b.setName("B");
         b.start();
     }
 }

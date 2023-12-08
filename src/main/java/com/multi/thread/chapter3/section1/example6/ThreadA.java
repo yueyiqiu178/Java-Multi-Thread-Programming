@@ -10,7 +10,6 @@ public class ThreadA extends Thread {
     private Object lock;
 
     public ThreadA(Object lock) {
-    	super("A");
         this.lock = lock;
     }
 

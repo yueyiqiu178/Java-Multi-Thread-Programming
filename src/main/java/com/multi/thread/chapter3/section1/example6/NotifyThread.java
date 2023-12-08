@@ -10,7 +10,6 @@ public class NotifyThread extends Thread {
     private Object lock;
 
     public NotifyThread(Object lock) {
-    	super("Notify");
         this.lock = lock;
     }
 

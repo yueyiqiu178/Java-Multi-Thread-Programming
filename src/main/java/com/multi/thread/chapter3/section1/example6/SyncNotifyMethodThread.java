@@ -10,7 +10,6 @@ public class SyncNotifyMethodThread extends Thread {
     private Object lock;
 
     public SyncNotifyMethodThread(Object lock) {
-    	super("SyncNotifyMethod");
         this.lock = lock;
     }
 

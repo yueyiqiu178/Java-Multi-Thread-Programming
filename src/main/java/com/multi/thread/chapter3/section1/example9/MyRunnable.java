@@ -15,7 +15,7 @@ public class MyRunnable {
                 synchronized (lock) {
                     System.out.println("wait begin timer = " + System.currentTimeMillis());
                     lock.wait(5000);
-                    System.out.println("wait end timer =   " + System.currentTimeMillis());
+                    System.out.println("wait end timer = " + System.currentTimeMillis());
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -28,7 +28,7 @@ public class MyRunnable {
             synchronized (lock) {
                 System.out.println("notify begin timer = " + System.currentTimeMillis());
                 lock.notify();
-                System.out.println("notify end timer =   " + System.currentTimeMillis());
+                System.out.println("notify end timer = " + System.currentTimeMillis());
             }
         }
     };

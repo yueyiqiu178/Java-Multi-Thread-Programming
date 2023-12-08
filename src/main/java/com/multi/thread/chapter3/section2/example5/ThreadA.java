@@ -19,7 +19,7 @@ public class ThreadA extends Thread {
             synchronized (b) {
                 System.out.println("begin A threadName = " + Thread.currentThread().getName() + " " + System.currentTimeMillis());
                 Thread.sleep(5000);
-                System.out.println("end A threadName =   " + Thread.currentThread().getName() + " " + System.currentTimeMillis());
+                System.out.println("end A threadName = " + Thread.currentThread().getName() + " " + System.currentTimeMillis());
             }
         } catch (Exception e) {
             e.printStackTrace();

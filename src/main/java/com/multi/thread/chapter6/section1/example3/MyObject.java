@@ -17,7 +17,7 @@ public class MyObject {
         try {
             if (myObject != null) {
             } else {
-                //Thread.sleep(3000);
+                Thread.sleep(3000);
                 myObject = new MyObject();
             }
         } catch (Exception e) {

@@ -16,11 +16,9 @@ public class Run {
         };
 
         Thread threadA = new Thread(runnable);
-        threadA.setName("A");
         threadA.start();
         Thread.sleep(500);
         Thread threadB = new Thread(runnable);
-        threadB.setName("B");
         threadB.start();
         Thread.sleep(500);
         System.out.println(service.lock.hasQueuedThread(threadA));

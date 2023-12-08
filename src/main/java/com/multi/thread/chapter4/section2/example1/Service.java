@@ -16,7 +16,7 @@ public class Service {
             try {
                 lock.readLock().lock();
                 System.out.println("获取读锁" + Thread.currentThread().getName() + " " + System.currentTimeMillis());
-                Thread.sleep(60000);
+                Thread.sleep(10000);
             } finally {
                 lock.readLock().unlock();
             }

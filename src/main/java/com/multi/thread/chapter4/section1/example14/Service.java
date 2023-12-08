@@ -17,7 +17,6 @@ public class Service {
     public void waitMethod() {
         try {
             lock.lock();
-            System.out.println(Thread.currentThread().getName());
             Thread.sleep(Integer.MAX_VALUE);
         } catch (Exception e) {
             e.printStackTrace();

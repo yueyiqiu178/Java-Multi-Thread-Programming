@@ -10,9 +10,9 @@ public class ThreadB extends Thread {
     @Override
     public void run() {
         try {
-            System.out.println("b run begin timer =  " + System.currentTimeMillis());
+            System.out.println("b run begin timer = " + System.currentTimeMillis());
             Thread.sleep(5000);
-            System.out.println("b run end timer =    " + System.currentTimeMillis());
+            System.out.println("b run end timer = " + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         }

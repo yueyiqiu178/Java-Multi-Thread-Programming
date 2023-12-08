@@ -20,9 +20,9 @@ public class Service {
             Calendar calendarRef = Calendar.getInstance();
             calendarRef.add(Calendar.SECOND, 10);
             lock.lock();
-            System.out.println("wait begin Timer =   " + System.currentTimeMillis());
+            System.out.println("wait begin Timer = " + System.currentTimeMillis());
             condition.awaitUntil(calendarRef.getTime());
-            System.out.println("wait end Timer =     " + System.currentTimeMillis());
+            System.out.println("wait end Timer = " + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -37,7 +37,7 @@ public class Service {
             lock.lock();
             System.out.println("notify begin Timer = " + System.currentTimeMillis());
             condition.signalAll();
-            System.out.println("notify end Timer =   " + System.currentTimeMillis());
+            System.out.println("notify end Timer = " + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

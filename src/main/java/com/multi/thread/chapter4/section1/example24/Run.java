@@ -30,11 +30,10 @@ public class Run {
                         conditionA.await();
                     }
                     for (int i = 0; i < 3; i++) {
-                        System.out.println("Thread:A" + (i + 1));
+                        System.out.println("ThreadA" + (i + 1));
                     }
-                    System.out.println("A End");
                     nextPrintWho = 2;
-                    conditionA.signalAll();
+                    conditionB.signalAll();
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
@@ -52,11 +51,10 @@ public class Run {
                         conditionA.await();
                     }
                     for (int i = 0; i < 3; i++) {
-                        System.out.println("Thread:B" + (i + 1));
+                        System.out.println("ThreadA" + (i + 1));
                     }
-                    System.out.println("B End");
                     nextPrintWho = 3;
-                    conditionA.signalAll();
+                    conditionB.signalAll();
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
@@ -74,11 +72,10 @@ public class Run {
                         conditionA.await();
                     }
                     for (int i = 0; i < 3; i++) {
-                        System.out.println("Thread:C" + (i + 1));
+                        System.out.println("ThreadA" + (i + 1));
                     }
-                    System.out.println("C End");
                     nextPrintWho = 1;
-                    conditionA.signalAll();
+                    conditionB.signalAll();
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {

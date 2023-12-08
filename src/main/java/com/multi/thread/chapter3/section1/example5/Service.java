@@ -12,7 +12,7 @@ public class Service {
             synchronized (lock) {
                 System.out.println("begin wait()");
                 //lock.wait();
-                Thread.sleep(5000);
+                Thread.sleep(40000);
                 System.out.println("end wait()");
             }
         } catch (Exception e) {

@@ -11,9 +11,9 @@ public class Test {
         try {
             MyThread myThread = new MyThread();
             myThread.start();
-            myThread.join();
-            //Thread.sleep(2000);
-            System.out.println("end timer =   " + System.currentTimeMillis());
+            myThread.join(2000);
+//            Thread.sleep(2000);
+            System.out.println("end timer = " + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         }

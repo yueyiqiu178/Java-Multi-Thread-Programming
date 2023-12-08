@@ -20,7 +20,7 @@ public class ThreadA extends Thread {
                 if (MyList.size() != 5) {
                     System.out.println("wait begin " + System.currentTimeMillis());
                     lock.wait();
-                    System.out.println("wait end   " + System.currentTimeMillis());
+                    System.out.println("wait end " + System.currentTimeMillis());
                 }
             }
         } catch (Exception e) {

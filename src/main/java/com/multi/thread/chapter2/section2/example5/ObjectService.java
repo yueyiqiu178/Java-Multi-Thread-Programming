@@ -12,26 +12,17 @@ public class ObjectService {
             synchronized (this) {
                 System.out.println("A begin time = " + System.currentTimeMillis());
                 Thread.sleep(2000);
-                System.out.println("A end time =   " + System.currentTimeMillis());
+                System.out.println("A end time = " + System.currentTimeMillis());
             }
-            Thread.sleep(1000);            System.out.println("out A");
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     public void serviceMethodB() {
-    	
-    	try {
         synchronized (this) {
             System.out.println("B begin time = " + System.currentTimeMillis());
-            Thread.sleep(1000);
-            System.out.println("B end time =   " + System.currentTimeMillis());
-        }
-        System.out.println("out B");
-    	}
-        catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("B end time = " + System.currentTimeMillis());
         }
     }
 }

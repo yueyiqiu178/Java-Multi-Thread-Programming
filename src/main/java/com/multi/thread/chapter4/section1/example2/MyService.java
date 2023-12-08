@@ -17,7 +17,7 @@ public class MyService {
             lock.lock();
             System.out.println("methodA begin ThreadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
             Thread.sleep(5000);
-            System.out.println("methodA end ThreadName =   " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
+            System.out.println("methodA end ThreadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -30,7 +30,7 @@ public class MyService {
             lock.lock();
             System.out.println("methodB begin ThreadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
             Thread.sleep(5000);
-            System.out.println("methodB end ThreadName =   " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
+            System.out.println("methodB end ThreadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

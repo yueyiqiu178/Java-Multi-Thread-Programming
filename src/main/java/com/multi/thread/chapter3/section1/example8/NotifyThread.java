@@ -18,7 +18,7 @@ public class NotifyThread extends Thread {
     @Override
     public void run() {
         synchronized (lock) {
-//            lock.notify();
+            lock.notify();
 //            lock.notify();
 //            lock.notify();
 //            lock.notify();
@@ -28,8 +28,7 @@ public class NotifyThread extends Thread {
 //            lock.notify();
 //            lock.notify();
 
-            lock.notifyAll();
+//            lock.notifyAll();
         }
-        System.out.println("End NotifyThread");
     }
 }

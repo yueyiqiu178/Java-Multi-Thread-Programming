@@ -25,7 +25,7 @@ public class Run1 {
         try {
             MyTask task = new MyTask();
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            String dateString = "2023-12-04 16:26:00";
+            String dateString = "2018-12-22 11:40:00";
             Date dateRef = sdf.parse(dateString);
             System.out.println("字符串时间：" + dateRef.toLocaleString() + "当前时间：" + new Date().toLocaleString());
             timer.schedule(task, dateRef);

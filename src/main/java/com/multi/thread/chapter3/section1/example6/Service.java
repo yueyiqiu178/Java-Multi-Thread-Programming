@@ -12,7 +12,7 @@ public class Service {
             synchronized (lock) {
                 System.out.println("begin wait() ThreadName = " + Thread.currentThread().getName());
                 lock.wait();
-                System.out.println("end wait() ThreadName =   " + Thread.currentThread().getName());
+                System.out.println("end wait() ThreadName = " + Thread.currentThread().getName());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -24,8 +24,8 @@ public class Service {
             synchronized (lock) {
                 System.out.println("begin notify() ThreadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
                 lock.notify();
-                Thread.sleep(2000);
-                System.out.println("end notify() ThreadName =   " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
+                Thread.sleep(5000);
+                System.out.println("end notify() ThreadName = " + Thread.currentThread().getName() + " time = " + System.currentTimeMillis());
             }
         } catch (Exception e) {
             e.printStackTrace();
