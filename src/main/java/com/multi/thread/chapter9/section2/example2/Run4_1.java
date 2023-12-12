@@ -4,12 +4,11 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
-public class Run2_1 {
-	// 线程数量小于等于corePoolSize
-	// keepAliveTime大于5时也不清除空闲线程
-	// 因为空闲线程在corePool中
-	// corePool中的线程是不能删除的
-	// 所以keepAliveTime参数无效
+public class Run4_1 {
+	// 队列使用LinkedBlockingQueue类
+	// 并且线程数量大于corePoolSize时将其余的任务放入队列中
+	// 同一时间最多只能有7个线程在运行
+	// 所以keepAliveTime大于5时也不清除空闲线程
 	public static void main(String[] args) throws InterruptedException {
 		Runnable runnable = new Runnable() {
 			@Override
@@ -27,10 +26,11 @@ public class Run2_1 {
 		executor.execute(runnable); // 2
 		executor.execute(runnable); // 3
 		executor.execute(runnable); // 4
-
 		executor.execute(runnable); // 5
 		executor.execute(runnable); // 6
 		executor.execute(runnable); // 7
+		executor.execute(runnable); // 8
+		executor.execute(runnable); // 9
 		Thread.sleep(300);
 		System.out.println("A executor.getCorePoolSize()=" + executor.getCorePoolSize());
 		System.out.println("A executor.getMaximumPoolSize()=" + executor.getMaximumPoolSize());
@@ -42,17 +42,10 @@ public class Run2_1 {
 		System.out.println("B executor.getMaximumPoolSize()=" + executor.getMaximumPoolSize());
 		System.out.println("B executor.getPoolSize()=" + executor.getPoolSize());
 		System.out.println("B executor.getQueue().size()=" + executor.getQueue().size());
-		
-		/*
-		// 车中可载人的标准人数
-		System.out.println(pool.getCorePoolSize());
-		// 车中可载人的最大人数
-		System.out.println(pool.getMaximumPoolSize());
-		// 车中正在载的人数
-		System.out.println(pool.getPoolSize());
-		// 站在地面上等待被送的人数
-		System.out.println(pool.getQueue().size());
-		 */
 	}
-	// 按钮呈红色，因为池中还有线程在等待任务
+	// 通过此实验可以得知，如果使用LinkedBlockingQueue作为任务队列
+	// 则不管线程数大于corePoolSize还是大于maximumPoolSize
+	// 都将多余的任务放入队列中
+	// 程序都可以正确无误地运行，并且不会出现异常
+	// 此时按钮呈红色，因为池中还有线程在等待任务
 }
